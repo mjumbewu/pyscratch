@@ -33,7 +33,7 @@ Scratch blocks included in pyscratch
 - [Sensing] (#sensing)
 - [Custom Blocks] (#custom blocks)
 
-##### Motion
+###### Motion
 | Scratch | Python | Integrated | Notes |
 |---------------------|------------------------|:----------:|--------------------------------------|
 | Move `10` steps | sprite.move(10) | ✔️ |  |
