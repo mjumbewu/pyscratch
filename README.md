@@ -16,7 +16,7 @@ def main():
 
 ## Table of Contents
 
-- [Sprite](#features)
+- [Sprite](#sprites)
 - [Blocks](#blocks)
 - [Cloud](#license)
 - [License](#license)
@@ -25,7 +25,30 @@ def main():
 Sprite class
 
 ## Blocks
-Blocks
+Scratch blocks included in pyscratch
+- [Motion](#motion)
+- [Looks](#looks)
+- [Events] (#events)
+- [Control] (#control)
+- [Sensing] (#sensing)
+- [Custom Blocks] (#custom blocks)
+
+###### Motion
+| Scratch             |          Python          | Integrated | Notes                                |
+|---------------------|:------------------------:|-----------:|--------------------------------------|
+| Move `10` steps     | sprite.move(10)          |      ✔️     |                                      |
+| Turn ↻ `15` degrees | sprite.rotate(15, True)  |      ❌     | Second parameter is False by default |
+| Turn ↺ `15` degrees | sprite.rotate(15, False) |      ❌     |                                      |
+
+###### Looks
+
+###### Events
+
+###### Control
+
+###### Sensing
+
+###### Custom Blocks
 
 ## Cloud
 Cloud connection
