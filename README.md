@@ -33,7 +33,7 @@ Scratch blocks included in pyscratch
 - [Control](#control)
 - [Sensing](#sensing)
 - [Pen](#pen)
-- [Custom Blocks](#custom blocks)
+- [Custom Blocks](#custom-blocks)
 
 ###### Motion
 | Scratch | Python | Integrated | Notes |
@@ -75,7 +75,7 @@ Scratch blocks included in pyscratch
 | Clear graphic effects | sprite.clear_effects() | ❌ |  |
 | Show | sprite.show() | ❌ |  |
 | Hide | sprite.hide() | ❌ |  |
-| Go to `layer` layer | sprite.set_layer(layer) | ❌ | Only params are `"front"` and `"back"` |
+| Go to `front` layer | sprite.set_layer("front") | ❌ | Only params are `"front"` and `"back"` |
 | Go `forward` `1` layers | sprite.change_layer("forward", 1) | ❌ | Only params are `"forward"` and `"backward"` |
 | Costume `number` | sprite.costume("number") | ❌ | Only params are `"number"` and `"name"` |
 | Backdrop `number` | sprite.backdrop("number") | ❌ |  |
