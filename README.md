@@ -7,8 +7,8 @@ Scratch interface for Python
 from pyscratch import *
 
 #Initialization
-project.name = "Scratch Project"
 project.size = (640, 480)
+project.name = "Scratch Project"
 
 @run
 def main():
