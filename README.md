@@ -1,4 +1,8 @@
-# pyscratch
+![Python 3+](https://img.shields.io/badge/python-3%2B-green.svg)
+![Pygame 1.9.3+](https://img.shields.io/badge/pygame-1.9.3%2B-green.svg)
+![MIT](https://img.shields.io/badge/license-MIT-blue.svg)
+![Status](https://img.shields.io/badge/status-pre--alpha-red.svg)
+---
 Scratch interface for Python
 
 ## Usage
