@@ -43,12 +43,12 @@ Scratch blocks included in pyscratch
 | Move `10` steps | sprite.move(10) | ✔️ |  |
 | Turn ↻ `15` degrees | sprite.rotate(15, True) | ❌ | Second parameter is False by default |
 | Turn ↺ `15` degrees | sprite.rotate(15, False) | ❌ | Second parameter is False by default |
-| Go to `object` | sprite.goto(object) | ❌ | See [parameters](#parameters) reference |
+| Go to `location` | sprite.goto(location) | ❌ | See [parameters](#parameters) reference |
 | Go to x: `0` y: `0` | sprite.goto((0, 0)) | ❌ |  |
-| Glide `1` secs to `object` | sprite.glide(1, object) | ❌ | See [parameters](#parameters) reference |
+| Glide `1` secs to `location` | sprite.glide(1, location) | ❌ | See [parameters](#parameters) reference |
 | Glide `1` secs to x: `0` y: `0` | sprite.glide(1, (0, 0)) | ❌ |  |
 | Point in direction `90` | sprite.point_dir(90) | ❌ |  |
-| Point towards `object` | sprite.point_to(object) | ❌ | See [parameters](#parameters) reference |
+| Point towards `location` | sprite.point_to(location) | ❌ | See [parameters](#parameters) reference |
 | Set x to `0` | sprite.set_x(0) | ❌ |  |
 | Set y to `0` | sprite.set_y(0) | ❌ |  |
 | Change x by `10` | sprite.add_x(10) | ❌ |  |
@@ -114,7 +114,7 @@ Scratch blocks included in pyscratch
 ###### Custom Blocks
 
 ## Parameters
-`object` parameter can be
+`location` parameter can be
 - Random position → `"random-position"`
 - Mouse pointer's position → `"mouse-position"`
 - Another sprite's position → [Sprite](#sprite) instance
