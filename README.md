@@ -41,8 +41,8 @@ Scratch blocks included in pyscratch
 | Scratch | Python | Integrated | Notes |
 |---------------------------------|----------------------------|:-----------:|-----------------------------------------|
 | Move `10` steps | sprite.move(10) | ✔️ |  |
-| Turn ↻ `15` degrees | sprite.rotate(15, True) | ❌ | Second parameter is False by default |
-| Turn ↺ `15` degrees | sprite.rotate(15, False) | ❌ | Second parameter is False by default |
+| Turn ↻ `15` degrees | sprite.turn(15, True) | ❌ | Second parameter is False by default |
+| Turn ↺ `15` degrees | sprite.turn(15, False) | ❌ | Second parameter is False by default |
 | Go to `location` | sprite.goto(location) | ❌ | See [parameters](#parameters) reference |
 | Go to x: `0` y: `0` | sprite.goto((0, 0)) | ❌ |  |
 | Glide `1` secs to `location` | sprite.glide(1, location) | ❌ | See [parameters](#parameters) reference |
