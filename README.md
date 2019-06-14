@@ -88,6 +88,26 @@ Scratch blocks included in pyscratch
 ###### Control
 
 ###### Sensing
+| Scratch | Python | Integrated | Notes |
+|------------------------|----------------------------|:----------:|-------------------------------------------|
+| Touching `mouse pointer`? | sprite.touching("mouse-pointer") | ❌ | Only params are `"mouse-pointer"`, `"edge"` and [Sprite](#sprite) instance |
+| Toucing color `color`? |  | ❌ | Color reporters may not be done |
+| `color` is touching `color`? |  | ❌ |  |
+| Distance to `mouse pointer` | sprite.distance("mouse-pointer") | ❌ | Only params are `"mouse-pointer"` and [Sprite](#sprite) instance |
+| Ask `something` and wait | sprite.ask("something") | ❌ |  |
+| Answer | sprite.answer | ❌ |  |
+| Key `space` pressed? | key_pressed("space") | ❌ | See [Key Dictionary]() to see key parameters |
+| Mouse down? | mouse_down | ❌ |  |
+| Mouse x | mouse_x | ❌ |  |
+| Mouse y | mouse_y | ❌ |  |
+| Set drag mode `draggable` | sprite.drag("draggable") | ❌ | Only params are `"draggable"` and `"not-draggable"` |
+| Loudness | loudness | ❌ |  |
+| Timer | timer | ❌ |  |
+| Reset timer | reset_timer() | ❌ |  |
+| `value` of `sprite` | sprite["value"] | ❌ |  |
+| Current `date` | current(date) | ❌ | See [parameters](#parameters) reference |
+| Days since 2000 | days_since_2000 | ❌ |  |
+| Username | username | ❌ |  |
 
 ###### Pen
 
@@ -108,8 +128,17 @@ Scratch blocks included in pyscratch
 - Color → `"color"`
 - Ghost → `"ghost"`
 
+`date` parameter can be
+- Year → `"year"`
+- Month → `"month"`
+- Date → `"date"`
+- Day of the week → `"day"`
+- Hour → `"hour"`
+- Minute → `"minute"`
+- Second → `"second"`
+
 ## Cloud
-Cloud connection
+Cloud connection is in progress.
 
 ## License
 [MIT](LICENSE) © Kadir Aksoy
