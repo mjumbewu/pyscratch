@@ -44,48 +44,48 @@ Scratch blocks included in pyscratch
 ###### Motion
 | Scratch | Python | Integrated | Notes |
 |---------------------------------|----------------------------|:-----------:|-----------------------------------------|
-| Move `10` steps | sprite.move(10) | ✔️ |  |
-| Turn ↻ `15` degrees | sprite.turn(15, True) | ✔️ | Second parameter is False by default |
-| Turn ↺ `15` degrees | sprite.turn(15, False) | ✔️ | Second parameter is False by default |
-| Go to `location` | sprite.goto(location) | ✔️ | See [parameters](#parameters) reference |
-| Go to x: `0` y: `0` | sprite.goto((0, 0)) | ✔️ |  |
-| Glide `1` secs to `location` | sprite.glide(1, location) | ❌ | See [parameters](#parameters) reference |
-| Glide `1` secs to x: `0` y: `0` | sprite.glide(1, (0, 0)) | ❌ |  |
-| Point in direction `90` | sprite.dir = 90 | ✔️ |  |
-| Point towards `location` | sprite.point_to(location) | ❌ | See [parameters](#parameters) reference |
-| Set x to `0` | sprite.x = 0 | ✔️ |  |
-| Set y to `0` | sprite.y = 0 | ✔️ |  |
-| Change x by `10` | sprite.x += 10 | ✔️ |  |
-| Change y by `10` | sprite.y += 10 | ✔️ |  |
-| If on edge, bounce | sprite.edge_bounce() | ❌ |  |
-| Set rotation style `rotation` | sprite.set_rot(rotation) | ❌ | See [parameters](#parameters) reference |
-| X position | sprite.x | ✔️ | Attribute |
-| Y position | sprite.y | ✔️ | Attribute |
-| Direction | sprite.dir | ✔️ | Attribute |
+| Move `10` steps | Sprite.move(10) | ✔️ |  |
+| Turn ↻ `15` degrees | Sprite.turn(15, True) | ✔️ | Second parameter is False by default |
+| Turn ↺ `15` degrees | Sprite.turn(15, False) | ✔️ | Second parameter is False by default |
+| Go to `location` | Sprite.goto(location) | ✔️ | See [parameters](#parameters) reference |
+| Go to x: `0` y: `0` | Sprite.goto((0, 0)) | ✔️ |  |
+| Glide `1` secs to `location` | Sprite.glide(1, location) | ❌ | See [parameters](#parameters) reference |
+| Glide `1` secs to x: `0` y: `0` | Sprite.glide(1, (0, 0)) | ❌ |  |
+| Point in direction `90` | Sprite.dir = 90 | ✔️ |  |
+| Point towards `location` | Sprite.point_to(location) | ❌ | See [parameters](#parameters) reference |
+| Set x to `0` | Sprite.x = 0 | ✔️ |  |
+| Set y to `0` | Sprite.y = 0 | ✔️ |  |
+| Change x by `10` | Sprite.x += 10 | ✔️ |  |
+| Change y by `10` | Sprite.y += 10 | ✔️ |  |
+| If on edge, bounce | Sprite.edge_bounce() | ✔️ |  |
+| Set rotation style `rotation` | Sprite.set_rot(rotation) | ❌ | See [parameters](#parameters) reference |
+| X position | Sprite.x | ✔️ | Attribute |
+| Y position | Sprite.y | ✔️ | Attribute |
+| Direction | Sprite.dir | ✔️ | Attribute |
 
 ###### Looks
 | Scratch | Python | Integrated | Notes |
 |--------------------------------|-----------------------------------|:----------:|----------------------------------------------|
-| Say `Hello!` | sprite.say("Hello!") | ❌ |  |
-| Say `Hello!` for `2` seconds | sprite.say("Hello!", 2) | ❌ |  |
-| Think `Hmm.` | sprite.think("Hmm.") | ❌ |  |
-| Think `Hmm.` for `2` seconds | sprite.think("Hmm.", 2) | ❌ |  |
-| Switch costume to `costume1` | sprite.set_costume("costume1") | ❌ | Costume's name is determined by user |
-| Next costume | sprite.next_costume() | ❌ |  |
-| Switch backdrop to `backdrop1` | sprite.set_backdrop("backdrop1") | ❌ | Backdrop's name is determined by user |
-| Next backdrop | sprite.next_backdrop() | ❌ |  |
-| Change size by `10` | sprite.change_size(10) | ❌ |  |
-| Set size to `100`% | sprite.set_size(100) | ❌ |  |
-| Set `effect` effect to `0` | sprite.set_effect(effect, 0) | ❌ | See [parameters](#parameters) reference |
-| Change `effect` effect by `25` | sprite.change_effect(effect, 25) | ❌ | See [parameters](#parameters) reference |
-| Clear graphic effects | sprite.clear_effects() | ❌ |  |
-| Show | sprite.show() | ❌ |  |
-| Hide | sprite.hide() | ❌ |  |
-| Go to `front` layer | sprite.set_layer("front") | ❌ | Only params are `"front"` and `"back"` |
-| Go `forward` `1` layers | sprite.change_layer("forward", 1) | ❌ | Only params are `"forward"` and `"backward"` |
-| Costume `number` | sprite.costume("number") | ❌ | Only params are `"number"` and `"name"` |
-| Backdrop `number` | sprite.backdrop("number") | ❌ |  |
-| Size | sprite.size | ❌ | Attribute |
+| Say `Hello!` | Sprite.say("Hello!") | ❌ |  |
+| Say `Hello!` for `2` seconds | Sprite.say("Hello!", 2) | ❌ |  |
+| Think `Hmm.` | Sprite.think("Hmm.") | ❌ |  |
+| Think `Hmm.` for `2` seconds | Sprite.think("Hmm.", 2) | ❌ |  |
+| Switch costume to `costume1` | Sprite.set_costume("costume1") | ❌ | Costume's name is determined by user |
+| Next costume | Sprite.next_costume() | ❌ |  |
+| Switch backdrop to `backdrop1` | Sprite.set_backdrop("backdrop1") | ❌ | Backdrop's name is determined by user |
+| Next backdrop | Sprite.next_backdrop() | ❌ |  |
+| Change size by `10` | Sprite.change_size(10) | ❌ |  |
+| Set size to `100`% | Sprite.set_size(100) | ❌ |  |
+| Set `effect` effect to `0` | Sprite.set_effect(effect, 0) | ❌ | See [parameters](#parameters) reference |
+| Change `effect` effect by `25` | Sprite.change_effect(effect, 25) | ❌ | See [parameters](#parameters) reference |
+| Clear graphic effects | Sprite.clear_effects() | ❌ |  |
+| Show | Sprite.show() | ❌ |  |
+| Hide | Sprite.hide() | ❌ |  |
+| Go to `front` layer | Sprite.set_layer("front") | ❌ | Only params are `"front"` and `"back"` |
+| Go `forward` `1` layers | Sprite.change_layer("forward", 1) | ❌ | Only params are `"forward"` and `"backward"` |
+| Costume `number` | Sprite.costume("number") | ❌ | Only params are `"number"` and `"name"` |
+| Backdrop `number` | Sprite.backdrop("number") | ❌ |  |
+| Size | Sprite.size | ❌ | Attribute |
 
 ###### Events
 
@@ -94,21 +94,21 @@ Scratch blocks included in pyscratch
 ###### Sensing
 | Scratch | Python | Integrated | Notes |
 |------------------------|----------------------------|:----------:|-------------------------------------------|
-| Touching `mouse pointer`? | sprite.touching("mouse-pointer") | ❌ | Only params are `"mouse-pointer"`, `"edge"` and [Sprite](#sprite) instance |
+| Touching `mouse pointer`? | Sprite.touching("mouse-pointer") | ❌ | Only params are `"mouse-pointer"`, `"edge"` and [Sprite](#sprite) instance |
 | Touching color `color`? |  | ❌ | Color reporters may not be done |
 | `color` is touching `color`? |  | ❌ |  |
-| Distance to `mouse pointer` | sprite.distance("mouse-pointer") | ❌ | Only params are `"mouse-pointer"` and [Sprite](#sprite) instance |
-| Ask `something` and wait | sprite.ask("something") | ❌ |  |
-| Answer | sprite.answer | ❌ |  |
+| Distance to `mouse pointer` | Sprite.distance("mouse-pointer") | ❌ | Only params are `"mouse-pointer"` and [Sprite](#sprite) instance |
+| Ask `something` and wait | Sprite.ask("something") | ❌ |  |
+| Answer | Sprite.answer | ❌ |  |
 | Key `space` pressed? | key_pressed("space") | ✔️ | See [Key Dictionary]() to see key parameters |
 | Mouse down? | mouse_down(button) | ✔️ | Only params are `"left"`, `"right"` and `"middle"` |
 | Mouse x | mouse_x | ✔️ |  |
 | Mouse y | mouse_y | ✔️ |  |
-| Set drag mode `draggable` | sprite.drag("draggable") | ❌ | Only params are `"draggable"` and `"not-draggable"` |
+| Set drag mode `draggable` | Sprite.drag("draggable") | ❌ | Only params are `"draggable"` and `"not-draggable"` |
 | Loudness | loudness | ❌ |  |
 | Timer | timer | ✔️ |  |
 | Reset timer | reset_timer() | ✔️ |  |
-| `value` of `sprite` | sprite["value"] | ❌ |  |
+| `value` of `sprite` | Sprite["value"] | ❌ |  |
 | Current `date` | current(date) | ❌ | See [parameters](#parameters) reference |
 | Days since 2000 | days_since_2000 | ❌ |  |
 | Username | username | ❌ |  |
