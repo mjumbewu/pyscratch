@@ -45,23 +45,23 @@ Scratch blocks included in pyscratch
 | Scratch | Python | Integrated | Notes |
 |---------------------------------|----------------------------|:-----------:|-----------------------------------------|
 | Move `10` steps | sprite.move(10) | ✔️ |  |
-| Turn ↻ `15` degrees | sprite.turn(15, True) | ❌ | Second parameter is False by default |
-| Turn ↺ `15` degrees | sprite.turn(15, False) | ❌ | Second parameter is False by default |
+| Turn ↻ `15` degrees | sprite.turn(15, True) | ✔️ | Second parameter is False by default |
+| Turn ↺ `15` degrees | sprite.turn(15, False) | ✔️ | Second parameter is False by default |
 | Go to `location` | sprite.goto(location) | ❌ | See [parameters](#parameters) reference |
 | Go to x: `0` y: `0` | sprite.goto((0, 0)) | ❌ |  |
 | Glide `1` secs to `location` | sprite.glide(1, location) | ❌ | See [parameters](#parameters) reference |
 | Glide `1` secs to x: `0` y: `0` | sprite.glide(1, (0, 0)) | ❌ |  |
-| Point in direction `90` | sprite.point_dir(90) | ❌ |  |
+| Point in direction `90` | sprite.dir = 90 | ✔️ |  |
 | Point towards `location` | sprite.point_to(location) | ❌ | See [parameters](#parameters) reference |
-| Set x to `0` | sprite.set_x(0) | ❌ |  |
-| Set y to `0` | sprite.set_y(0) | ❌ |  |
-| Change x by `10` | sprite.add_x(10) | ❌ |  |
-| Change y by `10` | sprite.add_y(10) | ❌ |  |
+| Set x to `0` | sprite.x = 0 | ✔️ |  |
+| Set y to `0` | sprite.y = 0 | ✔️ |  |
+| Change x by `10` | sprite.x += 10 | ✔️ |  |
+| Change y by `10` | sprite.y += 10 | ✔️ |  |
 | If on edge, bounce | sprite.edge_bounce = True | ❌ | It is False by default |
 | Set rotation style `rotation` | sprite.set_rot(rotation) | ❌ | See [parameters](#parameters) reference |
-| X position | sprite.x | ❌ | Attribute |
-| Y position | sprite.y | ❌ | Attribute |
-| Direction | sprite.dir | ❌ | Attribute |
+| X position | sprite.x | ✔️ | Attribute |
+| Y position | sprite.y | ✔️ | Attribute |
+| Direction | sprite.dir | ✔️ | Attribute |
 
 ###### Looks
 | Scratch | Python | Integrated | Notes |
@@ -95,19 +95,19 @@ Scratch blocks included in pyscratch
 | Scratch | Python | Integrated | Notes |
 |------------------------|----------------------------|:----------:|-------------------------------------------|
 | Touching `mouse pointer`? | sprite.touching("mouse-pointer") | ❌ | Only params are `"mouse-pointer"`, `"edge"` and [Sprite](#sprite) instance |
-| Toucing color `color`? |  | ❌ | Color reporters may not be done |
+| Touching color `color`? |  | ❌ | Color reporters may not be done |
 | `color` is touching `color`? |  | ❌ |  |
 | Distance to `mouse pointer` | sprite.distance("mouse-pointer") | ❌ | Only params are `"mouse-pointer"` and [Sprite](#sprite) instance |
 | Ask `something` and wait | sprite.ask("something") | ❌ |  |
 | Answer | sprite.answer | ❌ |  |
-| Key `space` pressed? | key_pressed("space") | ❌ | See [Key Dictionary]() to see key parameters |
-| Mouse down? | mouse_down | ❌ |  |
-| Mouse x | mouse_x | ❌ |  |
-| Mouse y | mouse_y | ❌ |  |
+| Key `space` pressed? | key_pressed("space") | ✔️ | See [Key Dictionary]() to see key parameters |
+| Mouse down? | mouse_down(button) | ✔️ | Only params are `"left"`, `"right"` and `"middle"` |
+| Mouse x | mouse_x | ✔️ |  |
+| Mouse y | mouse_y | ✔️ |  |
 | Set drag mode `draggable` | sprite.drag("draggable") | ❌ | Only params are `"draggable"` and `"not-draggable"` |
 | Loudness | loudness | ❌ |  |
-| Timer | timer | ❌ |  |
-| Reset timer | reset_timer() | ❌ |  |
+| Timer | timer | ✔️ |  |
+| Reset timer | reset_timer() | ✔️ |  |
 | `value` of `sprite` | sprite["value"] | ❌ |  |
 | Current `date` | current(date) | ❌ | See [parameters](#parameters) reference |
 | Days since 2000 | days_since_2000 | ❌ |  |
