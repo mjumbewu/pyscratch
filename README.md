@@ -47,8 +47,8 @@ Scratch blocks included in pyscratch
 | Move `10` steps | sprite.move(10) | ✔️ |  |
 | Turn ↻ `15` degrees | sprite.turn(15, True) | ✔️ | Second parameter is False by default |
 | Turn ↺ `15` degrees | sprite.turn(15, False) | ✔️ | Second parameter is False by default |
-| Go to `location` | sprite.goto(location) | ❌ | See [parameters](#parameters) reference |
-| Go to x: `0` y: `0` | sprite.goto((0, 0)) | ❌ |  |
+| Go to `location` | sprite.goto(location) | ✔️ | See [parameters](#parameters) reference |
+| Go to x: `0` y: `0` | sprite.goto((0, 0)) | ✔️ |  |
 | Glide `1` secs to `location` | sprite.glide(1, location) | ❌ | See [parameters](#parameters) reference |
 | Glide `1` secs to x: `0` y: `0` | sprite.glide(1, (0, 0)) | ❌ |  |
 | Point in direction `90` | sprite.dir = 90 | ✔️ |  |
@@ -57,7 +57,7 @@ Scratch blocks included in pyscratch
 | Set y to `0` | sprite.y = 0 | ✔️ |  |
 | Change x by `10` | sprite.x += 10 | ✔️ |  |
 | Change y by `10` | sprite.y += 10 | ✔️ |  |
-| If on edge, bounce | sprite.edge_bounce = True | ❌ | It is False by default |
+| If on edge, bounce | sprite.edge_bounce() | ❌ |  |
 | Set rotation style `rotation` | sprite.set_rot(rotation) | ❌ | See [parameters](#parameters) reference |
 | X position | sprite.x | ✔️ | Attribute |
 | Y position | sprite.y | ✔️ | Attribute |
