@@ -52,13 +52,13 @@ Scratch blocks included in pyscratch
 | Glide `1` secs to `location` | Sprite.glide(1, location) | ❌ | See [parameters](#parameters) reference |
 | Glide `1` secs to x: `0` y: `0` | Sprite.glide(1, (0, 0)) | ❌ |  |
 | Point in direction `90` | Sprite.dir = 90 | ✔️ |  |
-| Point towards `location` | Sprite.point_to(location) | ❌ | See [parameters](#parameters) reference |
+| Point towards `location` | Sprite.point_to(location) | ✔️ | See [parameters](#parameters) reference |
 | Set x to `0` | Sprite.x = 0 | ✔️ |  |
 | Set y to `0` | Sprite.y = 0 | ✔️ |  |
 | Change x by `10` | Sprite.x += 10 | ✔️ |  |
 | Change y by `10` | Sprite.y += 10 | ✔️ |  |
 | If on edge, bounce | Sprite.edge_bounce() | ✔️ |  |
-| Set rotation style `rotation` | Sprite.set_rot(rotation) | ❌ | See [parameters](#parameters) reference |
+| Set rotation style `rotation` | Sprite.rotation_style(rotation) | ✔️ | See [parameters](#parameters) reference |
 | X position | Sprite.x | ✔️ | Attribute |
 | Y position | Sprite.y | ✔️ | Attribute |
 | Direction | Sprite.dir | ✔️ | Attribute |
