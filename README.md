@@ -3,10 +3,9 @@
 ![MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Status](https://img.shields.io/badge/status-pre--alpha-red.svg)
 ---
-Scratch interface for Python
+[Scratch](https://en.wikipedia.org/wiki/Scratch_(programming_language)) is a block-based visual programming language and **pyscratch** is an interface to use Scratch in Python. Unfortunately you can not import or export Scratch project files **for now.**
 
 ## Usage
-
 ```python
 from pyscratch import *
 
@@ -17,11 +16,9 @@ project.name = "Scratch Project"
 @run
 def main():
     #Processing
-
 ```
 
 ## Table of Contents
-
 - [Sprite](#sprites)
 - [Blocks](#blocks)
 - [Parameters](#parameters)
@@ -29,7 +26,7 @@ def main():
 - [License](#license)
 
 ## Sprite
-Sprite class
+The sprite class which has the same properties with Scratch sprites, you can add costume to your sprite with `Sprite.add_costume(costume_name, filepath)` both parameters are string, costume name can be whatever you want. Example filepath: `"pyscratch/assets/scratch-cat.png"`
 
 ## Blocks
 Scratch blocks included in pyscratch
@@ -70,7 +67,7 @@ Scratch blocks included in pyscratch
 | Say `Hello!` for `2` seconds | Sprite.say("Hello!", 2) | ❌ |  |
 | Think `Hmm.` | Sprite.think("Hmm.") | ❌ |  |
 | Think `Hmm.` for `2` seconds | Sprite.think("Hmm.", 2) | ❌ |  |
-| Switch costume to `costume1` | Sprite.set_costume("costume1") | ❌ | Costume's name is determined by user |
+| Switch costume to `costume1` | Sprite.set_costume("costume1") | ✔️ | Costume's name was determined by user |
 | Next costume | Sprite.next_costume() | ❌ |  |
 | Switch backdrop to `backdrop1` | Sprite.set_backdrop("backdrop1") | ❌ | Backdrop's name is determined by user |
 | Next backdrop | Sprite.next_backdrop() | ❌ |  |
@@ -79,8 +76,8 @@ Scratch blocks included in pyscratch
 | Set `effect` effect to `0` | Sprite.set_effect(effect, 0) | ❌ | See [parameters](#parameters) reference |
 | Change `effect` effect by `25` | Sprite.change_effect(effect, 25) | ❌ | See [parameters](#parameters) reference |
 | Clear graphic effects | Sprite.clear_effects() | ❌ |  |
-| Show | Sprite.show() | ❌ |  |
-| Hide | Sprite.hide() | ❌ |  |
+| Show | Sprite.show() | ✔️ |  |
+| Hide | Sprite.hide() | ✔️ |  |
 | Go to `front` layer | Sprite.set_layer("front") | ❌ | Only params are `"front"` and `"back"` |
 | Go `forward` `1` layers | Sprite.change_layer("forward", 1) | ❌ | Only params are `"forward"` and `"backward"` |
 | Costume `number` | Sprite.costume("number") | ❌ | Only params are `"number"` and `"name"` |
@@ -102,12 +99,12 @@ Scratch blocks included in pyscratch
 | Answer | Sprite.answer | ❌ |  |
 | Key `space` pressed? | key_pressed("space") | ✔️ | See [Key Dictionary]() to see key parameters |
 | Mouse down? | mouse_down(button) | ✔️ | Only params are `"left"`, `"right"` and `"middle"` |
-| Mouse x | mouse_x | ✔️ |  |
-| Mouse y | mouse_y | ✔️ |  |
+| Mouse x | mouse.x | ✔️ |  |
+| Mouse y | mouse.y | ✔️ |  |
 | Set drag mode `draggable` | Sprite.drag("draggable") | ❌ | Only params are `"draggable"` and `"not-draggable"` |
 | Loudness | loudness | ❌ |  |
-| Timer | timer | ✔️ |  |
-| Reset timer | reset_timer() | ✔️ |  |
+| Timer | timer.secs | ✔️ |  |
+| Reset timer | timer.reset() | ✔️ |  |
 | `value` of `sprite` | Sprite["value"] | ❌ |  |
 | Current `date` | current(date) | ❌ | See [parameters](#parameters) reference |
 | Days since 2000 | days_since_2000 | ❌ |  |
