@@ -23,7 +23,7 @@ def main():
 ```
 
 ## Table of Contents
-- [Sprite](#sprites)
+- [Sprite](#sprite)
 - [Blocks](#blocks)
 - [Parameters](#parameters)
 - [Cloud](#license)
