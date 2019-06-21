@@ -101,7 +101,7 @@ Scratch blocks included in pyscratch
 | Distance to `mouse pointer` | Sprite.distance("mouse-pointer") | ❌ | Only params are `"mouse-pointer"` and [Sprite](#sprite) instance |
 | Ask `something` and wait | Sprite.ask("something") | ❌ |  |
 | Answer | Sprite.answer | ❌ |  |
-| Key `space` pressed? | key_pressed("space") | ✔️ | See [Key Dictionary]() to see key parameters |
+| Key `space` pressed? | key_pressed("space") | ✔️ | See [Key Dictionary](https://github.com/kadir014/pyscratch/blob/master/pyscratch/keys.py) to see key parameters |
 | Mouse down? | mouse_down(button) | ✔️ | Only params are `"left"`, `"right"` and `"middle"` |
 | Mouse x | mouse.x | ✔️ |  |
 | Mouse y | mouse.y | ✔️ |  |
