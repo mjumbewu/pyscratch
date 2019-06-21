@@ -68,11 +68,11 @@ Scratch blocks included in pyscratch
 | Think `Hmm.` | Sprite.think("Hmm.") | ❌ |  |
 | Think `Hmm.` for `2` seconds | Sprite.think("Hmm.", 2) | ❌ |  |
 | Switch costume to `costume1` | Sprite.set_costume("costume1") | ✔️ | Costume's name was determined by user |
-| Next costume | Sprite.next_costume() | ❌ |  |
+| Next costume | Sprite.next_costume() | ✔️ |  |
 | Switch backdrop to `backdrop1` | Sprite.set_backdrop("backdrop1") | ❌ | Backdrop's name is determined by user |
 | Next backdrop | Sprite.next_backdrop() | ❌ |  |
-| Change size by `10` | Sprite.change_size(10) | ❌ |  |
 | Set size to `100`% | Sprite.set_size(100) | ❌ |  |
+| Change size by `10` | Sprite.change_size(10) | ❌ |  |
 | Set `effect` effect to `0` | Sprite.set_effect(effect, 0) | ❌ | See [parameters](#parameters) reference |
 | Change `effect` effect by `25` | Sprite.change_effect(effect, 25) | ❌ | See [parameters](#parameters) reference |
 | Clear graphic effects | Sprite.clear_effects() | ❌ |  |
@@ -80,7 +80,7 @@ Scratch blocks included in pyscratch
 | Hide | Sprite.hide() | ✔️ |  |
 | Go to `front` layer | Sprite.set_layer("front") | ❌ | Only params are `"front"` and `"back"` |
 | Go `forward` `1` layers | Sprite.change_layer("forward", 1) | ❌ | Only params are `"forward"` and `"backward"` |
-| Costume `number` | Sprite.costume("number") | ❌ | Only params are `"number"` and `"name"` |
+| Costume `number` | Sprite.costume("number") | ✔️ | Only params are `"number"` and `"name"` |
 | Backdrop `number` | Sprite.backdrop("number") | ❌ |  |
 | Size | Sprite.size | ❌ | Attribute |
 
