@@ -1,7 +1,7 @@
 <p align="center">
   <img src="https://github.com/kadir014/pyscratch/blob/master/pyscratch/assets/pyscratch-logo-bg.png"><br>
   <img src="https://img.shields.io/badge/python-3%2B-green.svg">
-  <img src="https://img.shields.io/badge/pygame-1.9.3%2B-green.svg">
+  <img src="https://img.shields.io/badge/pygame-1.9.6%2B-green.svg">
   <img src="https://img.shields.io/badge/license-MIT-blue.svg">
   <img src="https://img.shields.io/badge/status-pre--alpha-red.svg">
 </p>
