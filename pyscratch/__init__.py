@@ -1,6 +1,9 @@
 version = "0.0"
 state = "pre-alpha"
 
+import collections
+import functools
+import inspect
 import time
 import pygame
 
@@ -51,6 +54,7 @@ project.icon = "pyscratch/assets/scratch-icon-bg16.png"
 
 running = True
 clock = pygame.time.Clock()
+event_callbacks = collections.defaultdict(list)
 
 #SCRIPT DEFAULTS
 
@@ -73,6 +77,16 @@ mouse = Mouse()
 
 #SCRIPTS
 
+def ensure_generatorfunction(func):
+    if inspect.isgeneratorfunction(func):
+        return func
+    else:
+        @functools.wraps(func)
+        def generator_func(*a, **k):
+            yield func(*a, **k)
+        return generator_func
+
+
 def mouse_down(button):
     m = pygame.mouse.get_pressed()
 
@@ -82,8 +96,15 @@ def mouse_down(button):
     else: return False
 
 
-def run(main_func):
+def when_started(func):
+    func = ensure_generatorfunction(func)
+    gen = func()
+    event_callbacks["start"].append(gen)
+
+
+def run():
     global running, clock
+    event_generator_queue = event_callbacks['start']
 
     while running:
         #HANDLE EVENTS
@@ -91,11 +112,23 @@ def run(main_func):
             if event.type == pygame.QUIT:
                 running = False
 
+        # If there are no new events that have been triggered, or all triggered
+        # events have finished running, then stop the run.
+        if len(event_generator_queue) == 0:
+            running = False
+
+        for _ in range(len(event_generator_queue)):
+            gen = event_generator_queue.pop()
+            try:
+                next(gen)
+            except StopIteration:
+                pass
+            else:
+                event_generator_queue.append(gen)
+
         #RENDER AND UPDATE
         timer.secs= time.time() - timer.time_start
         mouse.x, mouse.y = pygame.mouse.get_pos()
-
-        main_func()
 
         project.window.fill((255, 255, 255))
 
