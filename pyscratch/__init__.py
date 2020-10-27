@@ -4,11 +4,14 @@ state = "pre-alpha"
 import collections
 import functools
 import inspect
+import logging
 import time
 import pygame
 
 from pyscratch.sprite import Sprite, sprites
 from pyscratch.keys import key_dictionary, key_pressed
+
+log = logging.getLogger(__name__)
 
 class Project:
     def __init__(self):
@@ -114,19 +117,24 @@ def run():
 
         # If there are no new events that have been triggered, or all triggered
         # events have finished running, then stop the run.
+        log.debug(f'length of event generator queue is {len(event_generator_queue)}')
         if len(event_generator_queue) == 0:
             running = False
 
         for _ in range(len(event_generator_queue)):
             gen = event_generator_queue.pop()
             try:
+                log.debug(f'running {gen}')
                 next(gen)
             except StopIteration:
+                log.debug(f'generator {gen} is done')
                 pass
             else:
+                log.debug(f're-enqueing {gen}')
                 event_generator_queue.append(gen)
 
         #RENDER AND UPDATE
+        log.debug(f'rendering and updating')
         timer.secs= time.time() - timer.time_start
         mouse.x, mouse.y = pygame.mouse.get_pos()
 
@@ -140,4 +148,5 @@ def run():
         pygame.display.flip()
         clock.tick(project.fps)
 
+    log.debug('quitting')
     pygame.quit()
