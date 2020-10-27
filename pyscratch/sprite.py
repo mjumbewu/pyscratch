@@ -4,6 +4,7 @@ from random import randint
 
 sprites = list()
 
+
 class Sprite:
     def __init__(self):
         self.costumes = list()
@@ -20,7 +21,8 @@ class Sprite:
         self.hidden = False
 
     def rotate(self, angle):
-        if self.rotation_style == "all-around": self.disp_surf = pygame.transform.rotate(self.surf, angle)
+        if self.rotation_style == "all-around":
+            self.disp_surf = pygame.transform.rotate(self.surf, angle)
         if self.rotation_style == "left-right":
             if abs(angle) <= 90 or abs(angle) >= 270:
                 if self.flip:
@@ -53,7 +55,7 @@ class Sprite:
         self._dir = val % 360
         self.rotate(self._dir)
 
-    #SCRIPTS
+    # SCRIPTS
 
     #   MOTION
     def move(self, value):
@@ -72,9 +74,11 @@ class Sprite:
             self.rotate(-self._dir)
 
     def goto(self, location):
-        if isinstance(location, tuple): self.x, self.y = location
+        if isinstance(location, tuple):
+            self.x, self.y = location
 
-        elif isinstance(location, Sprite): self.x, self.y = location.x, location.y
+        elif isinstance(location, Sprite):
+            self.x, self.y = location.x, location.y
 
         elif location == "random-position":
             disp_rect = pygame.display.get_surface().get_rect()
@@ -87,7 +91,9 @@ class Sprite:
     def edge_bounce(self):
         disp_surf = pygame.display.get_surface().get_rect()
         if self.x + int(self.disp_surf.get_rect().width / 2) > disp_surf.width:
-            self.x -= (self.x + int(self.disp_surf.get_rect().width / 2)) - disp_surf.width
+            self.x -= (
+                self.x + int(self.disp_surf.get_rect().width / 2)
+            ) - disp_surf.width
             self._dir = 180 - self._dir
             self.rotate(-self._dir)
 
@@ -97,7 +103,9 @@ class Sprite:
             self.rotate(-self._dir)
 
         elif self.y + int(self.disp_surf.get_rect().height / 2) > disp_surf.height:
-            self.y -= (self.y + int(self.disp_surf.get_rect().height / 2)) - disp_surf.height
+            self.y -= (
+                self.y + int(self.disp_surf.get_rect().height / 2)
+            ) - disp_surf.height
             self._dir = -self._dir
             self.rotate(-self._dir)
 
@@ -117,7 +125,15 @@ class Sprite:
 
         elif location == "random-position":
             disp_rect = pygame.display.get_surface().get_rect()
-            self._dir = degrees(atan2(randint(0, disp_rect.height) - self.y, randint(0, disp_rect.width) - self.x)) % 360
+            self._dir = (
+                degrees(
+                    atan2(
+                        randint(0, disp_rect.height) - self.y,
+                        randint(0, disp_rect.width) - self.x,
+                    )
+                )
+                % 360
+            )
             self.rotate(-self._dir)
 
         elif location == "mouse-position":
@@ -126,9 +142,11 @@ class Sprite:
             self.rotate(-self._dir)
 
     #   LOOKS
-    def show(self): self.hidden = False
+    def show(self):
+        self.hidden = False
 
-    def hide(self): self.hidden = True
+    def hide(self):
+        self.hidden = True
 
     def set_costume(self, costume_name):
         for i, costume in enumerate(self.costumes):
@@ -139,9 +157,12 @@ class Sprite:
 
     def next_costume(self):
         self.current_costume += 1
-        if self.current_costume > len(self.costumes) - 1: self.current_costume = 0
+        if self.current_costume > len(self.costumes) - 1:
+            self.current_costume = 0
         self.update_costume()
 
     def costume(self, costume):
-        if costume == "number": return self.current_costume
-        elif costume == "name": return self.costumes[self.current_costume][0]
+        if costume == "number":
+            return self.current_costume
+        elif costume == "name":
+            return self.costumes[self.current_costume][0]
